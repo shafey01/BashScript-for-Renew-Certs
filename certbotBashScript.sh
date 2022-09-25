@@ -16,7 +16,7 @@ paste $fullPath/certDomains.txt $fullPath/certExpiry.txt | awk '{print $1, $2}' 
 
 
 awk '{
-if ($1 <=30)
+if ($2 <=5)
 system("/home/shafey/certbot-Bash/sendmail.sh "$2$1)
 else
 print "Done"
