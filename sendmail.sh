@@ -15,5 +15,5 @@ curl -X POST -H 'Content-type: application/json' --data '{"blocks":[{"type":"hea
 
 
 
-#curl -X POST -H 'Content-type: application/json' --data '{"text":"You have '$days' days for renew '$domain' Domain in server '$servername' !", "color":"#f44336"}' https://hooks.slack.com/services/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
+#curl -X POST -H 'Content-type: application/json' --data '{"text":"You have '$days' days for renew '$domain' Domain in server '$servername' !", "color":"#f44336"}' 
 #echo "You have $days days for renew $domain Domain" | mail -s "Experimental No Action Needed, NOTICE: $days Days to renew" example@gmail.com
