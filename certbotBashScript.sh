@@ -4,7 +4,7 @@
 fullPath=/home/shafey/certbot-Bash
 
 
-#sudo certbot certificates | grep 'Certificate Name\|Expiry' > $fullPath/certValid.txt
+sudo certbot certificates | grep 'Certificate Name\|Expiry' > $fullPath/certValid.txt
 
 
 cat $fullPath/certValid.txt | grep "Certificate Name" | cut -d ':' -f 2 | cut -d ' ' -f 2 > $fullPath/certDomains.txt
