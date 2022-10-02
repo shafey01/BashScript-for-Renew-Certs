@@ -1,4 +1,1 @@
-# please write Domain and the date in this format like the example below
-#domain yyyy/mm/dd
-#google.com 2022/10/3
-www.api.com 2022/11/1
+##############
