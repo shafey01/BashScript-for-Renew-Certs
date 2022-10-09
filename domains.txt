@@ -1,1 +1,3 @@
-##############
+# please write Domains in this format like the example below
+aanaab.com
+netflix.com
