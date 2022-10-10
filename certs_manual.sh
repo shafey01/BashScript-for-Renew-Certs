@@ -4,6 +4,9 @@
 ## Full path of your Directory that you put the script in it.
 fullpath=/home/shafey/certbot-Bash
 
+## webhook URL of your slack channel
+webhook_url=" "
+
 ## The while loop to scan the Domains files line by line and 'grep' & Regex for ignore comments and blank lines.
 grep -Ev "^#|^$" $fullpath/domains.txt | while read  domain; do
 
@@ -26,7 +29,7 @@ if [[ $days -le 7 ]]
 then
 
 ## Send message to slack channel.
-curl -X POST -H 'Content-type: application/json' --data '{"blocks":[{"type":"header","text":{"type":"plain_text","text":"Renew '$domain'","emoji":true}},{"type":"section","fields":[{"type":"mrkdwn","text":"*Days:*\n'$days'"},{"type":"mrkdwn","text":"*Domain:*\n '$domain'"}]}]}' webhook_url
+curl -X POST -H 'Content-type: application/json' --data '{"blocks":[{"type":"header","text":{"type":"plain_text","text":"Renew '$domain'","emoji":true}},{"type":"section","fields":[{"type":"mrkdwn","text":"*Days:*\n'$days'"},{"type":"mrkdwn","text":"*Domain:*\n '$domain'"}]}]}' $webhook_url
 
 fi
 
